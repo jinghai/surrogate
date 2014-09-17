@@ -22,8 +22,8 @@ function perform_action() {
   --user=$mysql_user 			\
   #--password=$mysql_pass 			\
   #--no-timestamp 				\
-  --compress \
-  --compress-threads=8 \
+  #--compress \
+  #--compress-threads=8 \
   --socket=$socket \
   --defaults-group="mysqld$instance" \
   $full_backup_path 2> $logfile_f
