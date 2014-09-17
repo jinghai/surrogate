@@ -111,8 +111,12 @@ echo adding cron entry
 #CRONPATH=`$(pwd $(crontab -l))/$(whoami)`
 CRONPATH=/var/spool/cron/root
 touch $CRONPATH
-echo >> $CRONPATH
-echo "$cron_m $cron_h * * * /usr/local/bin/surrogate -b full" >> $CRONPATH
+grep -q "surrogate -b full" $CRONPATH &&{
+  echo "crond config exits,run crontab -l for detail"
+}||{
+  echo >> $CRONPATH
+  echo "$cron_m $cron_h * * * /usr/local/bin/surrogate -b full" >> $CRONPATH
+}
 
 /bin/echo -ne "Installing Surrogate\t\t[##########] 100%\r"
 

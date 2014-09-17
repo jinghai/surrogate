@@ -59,7 +59,7 @@ function perform_action() {
   --ibbackup=xtrabackup_55 	\
   --parallel=4 			\
   --user=$mysql_user 		\
-  --password=$mysql_pass 		\
+  #--password=$mysql_pass 		\
   --apply-log 			\
   --socket=$socket \
   --defaults-group="mysqld$port" \
@@ -97,7 +97,7 @@ function perform_action() {
   --ibbackup=xtrabackup_55 	\
   --parallel=4 			\
   --user=$mysql_user 		\
-  --password=$mysql_pass 		\
+  #--password=$mysql_pass 		\
   --apply-log 			\
   --redo-only $active_backup 	\
   --socket=$socket \
@@ -120,7 +120,7 @@ function perform_action() {
   --ibbackup=xtrabackup_55 	\
   --parallel=4 			\
   --user=$mysql_user 		\
-  --password=$mysql_pass 		\
+  #--password=$mysql_pass 		\
   --socket=$socket \
   --defaults-group="mysqld$port" \
   --apply-log $active_backup 2>> $logfile_r
@@ -145,7 +145,7 @@ function perform_action() {
   innobackupex 			\
   --ibbackup=xtrabackup_55 	\
   --user=$mysql_user 		\
-  --password=$mysql_pass 		\
+  #--password=$mysql_pass 		\
   --socket=$socket \
   --defaults-group="mysqld$port" \
   --copy-back $active_backup 2>> $logfile_r

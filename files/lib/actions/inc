@@ -17,7 +17,7 @@ function perform_action() {
   --ibbackup=xtrabackup_55 		\
   --parallel=8 				\
   --user=$mysql_user 			\
-  --password=$mysql_pass 			\
+  #--password=$mysql_pass 			\
   --no-timestamp 				\
   --compress \
   --compress-threads=8 \
