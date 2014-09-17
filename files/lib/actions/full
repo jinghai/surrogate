@@ -25,7 +25,7 @@ function perform_action() {
   #--compress \
   #--compress-threads=8 \
   #--socket=$socket \
-  --defaults-group="mysqld$instance" \
+  #--defaults-group="mysqld$instance" \
   $full_backup_path 2> $logfile_f
 
   echo "checking if the backup completed sucsessfully"

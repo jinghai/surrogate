@@ -24,7 +24,7 @@ function perform_action() {
   --incremental 				\
   --incremental-basedir=$last_backup 	\
   #--socket=$socket \
-  --defaults-group="mysqld$instance" \
+  #--defaults-group="mysqld$instance" \
   $inc_backup_path 2> $logfile_i
 
   echo "checking if the backup completed sucsessfully"

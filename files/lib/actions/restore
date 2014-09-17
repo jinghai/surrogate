@@ -62,7 +62,7 @@ function perform_action() {
   #--password=$mysql_pass 		\
   --apply-log 			\
   #--socket=$socket \
-  --defaults-group="mysqld$port" \
+  #--defaults-group="mysqld$port" \
   --redo-only $active_backup 2> $logfile_r
 
   # see if the apply-log completed successfully
@@ -101,7 +101,7 @@ function perform_action() {
   --apply-log 			\
   --redo-only $active_backup 	\
   #--socket=$socket \
-  --defaults-group="mysqld$port" \
+  #--defaults-group="mysqld$port" \
   --incremental-dir=$active_incremental 2>> $logfile_r
 
   rm -R $active_incremental
@@ -122,7 +122,7 @@ function perform_action() {
   --user=$mysql_user 		\
   #--password=$mysql_pass 		\
   #--socket=$socket \
-  --defaults-group="mysqld$port" \
+  #--defaults-group="mysqld$port" \
   --apply-log $active_backup 2>> $logfile_r
 
   echo "check if the apply log completed successfully"
@@ -147,7 +147,7 @@ function perform_action() {
   --user=$mysql_user 		\
   #--password=$mysql_pass 		\
   #--socket=$socket \
-  --defaults-group="mysqld$port" \
+  #--defaults-group="mysqld$port" \
   --copy-back $active_backup 2>> $logfile_r
 
   echo "delete all log files to start fresh after restore"
