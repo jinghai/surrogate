@@ -10,8 +10,8 @@ function perform_action() {
   fi
 
   determine_full_backup_path
-  if [ ! -d `dirname $full_backup_path` ]; then
-    mkdir -p `dirname $full_backup_path`
+  if [ ! -d `$full_backup_path` ]; then
+    mkdir -p `$full_backup_path`
   fi
 
   echo "creating full backup"
