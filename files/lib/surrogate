@@ -14,12 +14,12 @@ function determine_full_backup_path(){
   # determine the location of todays backup (for retention)
   if [[ `date +%d` == "01" ]]; 
     then
-        full_backup_path="$backup_directory/monthly/full_$now"
+        full_backup_path="$backup_directory/monthly/full-$now"
   elif [[ `date +%u` == "7" ]];
     then
-        full_backup_path="$backup_directory/weekly/full_$now"
+        full_backup_path="$backup_directory/weekly/full-$now"
   else
-        full_backup_path="$backup_directory/daily/`LC_TIME=en_US date +%A`/full_$now"
+        full_backup_path="$backup_directory/daily/`LC_TIME=en_US date +%A`/full-$now"
   fi
 }
 # fin
