@@ -108,7 +108,7 @@ if [ "$install_qpress" == "Y" ]; then
 fi
 
 echo adding cron entry
-CRONPATH=`$(pwd $(crontab -l))/$(whoami)`
+CRONPATH=`/var/spool/cron/$(whoami)`
 echo >> $CRONPATH
 echo "$cron_m $cron_h * * * /usr/local/bin/surrogate -b full" >> $CRONPATH
 
