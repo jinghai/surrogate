@@ -11,11 +11,11 @@ function perform_action() {
 
   determine_full_backup_path
   #if [ ! -d $full_backup_path ]; then
-    echo $full_backup_path
-    mkdir -p $full_backup_path
+  #  echo $full_backup_path
+  #  mkdir -p $full_backup_path
   #fi
-
-  echo "creating full backup"
+  mkdir -p $full_backup_path
+  echo "creating full backup $full_backup_path"
 
   innobackupex 				\
   --ibbackup=xtrabackup_55 		\
