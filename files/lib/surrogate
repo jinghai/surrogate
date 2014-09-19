@@ -19,7 +19,8 @@ function determine_full_backup_path(){
     then
         full_backup_path="$backup_directory/weekly/full-$now"
   else
-        full_backup_path="$backup_directory/daily/`LC_TIME=en_US date +%A`/full-$now"
+        #full_backup_path="$backup_directory/daily/`LC_TIME=en_US date +%A`/full-$now"
+	full_backup_path="$backup_directory/daily/`LC_TIME=en_US date +%A`/"
   fi
 }
 # fin
